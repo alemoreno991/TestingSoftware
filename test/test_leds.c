@@ -83,6 +83,9 @@ void test_ApagarTodosLeds( void )
  */
 void test_ConsultarEstadoLed( void )
 {
+    Leds_Off( 3 );
+    TEST_ASSERT( false == Leds_getEstado( 3 ) );
+
     Leds_On( 3 );
     TEST_ASSERT( true == Leds_getEstado( 3 ) );
 }

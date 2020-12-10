@@ -39,13 +39,5 @@ void Leds_OffAll( void )
 
 bool Leds_getEstado( uint8_t led )
 {
-    if ( ( *direccion & LedToMask( led ) ) )
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-    
+    return ( ( *direccion & LedToMask( led ) ) );
 }
